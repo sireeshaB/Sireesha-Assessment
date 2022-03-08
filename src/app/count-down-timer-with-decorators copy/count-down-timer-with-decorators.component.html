@@ -1,0 +1,15 @@
+
+<div class="row">
+    <div class="col-6">
+        <app-display-timer [timer]="timerObj"></app-display-timer>
+    </div>
+    <div class="col-6">
+        <app-input-timer (timerValue) = getTimerValue($event)></app-input-timer>
+    </div>
+    <div class="col-6">
+        <app-display-timer-logs [timestamps]="timestamps"></app-display-timer-logs>
+    </div>
+    <div class="col-6">
+        <app-display-buttons-click-count [btnClickCountObj]="btnClickCount"></app-display-buttons-click-count>
+    </div>
+</div>

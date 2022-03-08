@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-6 text-center">
+        <div class="col-12 rounded-circle bg-success click-count text-white" *ngIf="clickCount?.value && clickCount?.startCount else noStartCount">
+            <span>{{clickCount.startCount}}</span>
+        </div>
+        <ng-template #noStartCount>
+            <div class="col-12 rounded-circle bg-success click-count text-white">
+                <span>0</span>
+            </div>
+        </ng-template>
+        <div class="col-12">Started </div>
+    </div>
+    <div class="col-6">
+        <div class="col-12 rounded-circle bg-success click-count text-white" *ngIf="clickCount?.value && clickCount?.pauseCount else noPauseCount">
+            <span>{{clickCount.pauseCount}}</span>
+        </div>
+        <ng-template #noPauseCount>
+            <div class="col-12 rounded-circle bg-success click-count text-white"><span>0</span></div>
+        </ng-template>
+        <div class="col-12">Paused</div>
+    </div>
+</div>

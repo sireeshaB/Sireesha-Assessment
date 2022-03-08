@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Siva",
+        "class": "8",
+        "section": "A",
+        "physics": "80",
+        "maths": "70",
+        "english": "78"
+    },
+    {
+        "name": "Ram",
+        "class": "9",
+        "section": "B",
+        "physics": "72",
+        "maths": "65",
+        "english": "80"
+    },
+    {
+        "name": "Rama",
+        "class": "8",
+        "section": "A",
+        "physics": "80",
+        "maths": "70",
+        "english": "78"
+    },
+    {
+        "name": "Dev",
+        "class": "7",
+        "section": "C",
+        "physics": "60",
+        "maths": "75",
+        "english": "67"
+    },
+    {
+        "name": "Ramya",
+        "class": "8",
+        "section": "A",
+        "physics": "80",
+        "maths": "70",
+        "english": "88"
+    },
+    {
+        "name": "Raghu",
+        "class": "7",
+        "section": "A",
+        "physics": "66",
+        "maths": "60",
+        "english": "68"
+    },
+    {
+        "name": "Raj",
+        "class": "8",
+        "section": "A",
+        "physics": "90",
+        "maths": "92",
+        "english": "88"
+    },
+    {
+        "name": "Ravi",
+        "class": "7",
+        "section": "B",
+        "physics": "81",
+        "maths": "70",
+        "english": "87"
+    }
+]

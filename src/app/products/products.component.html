@@ -1,0 +1,52 @@
+<div class="products-block">
+    <div class="row justify-content-end">
+        <div id="btnContainer" class="col-auto p-0">
+            <button class="btn" (click)="toggleView('grid')" [ngClass]="showGridView ? 'btn-secondary':''"><i class="bi bi-grid-fill"></i></button>
+            <button class="btn" (click)="toggleView('list')" [ngClass]="!showGridView ? 'btn-secondary':''"><i class="bi bi-list-task"></i></button> 
+        </div>
+        <div class="col-auto">
+            <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+                <button class="btn btn-success" ngbDropdownToggle>{{priceFilterLabel}}</button>
+                <div class="dropdown-menu" ngbDropdownMenu>
+                    <button ngbDropdownItem *ngFor="let filter of priceFilters" (click)="ngDropDwonClick(filter)">{{filter.label}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" *ngIf="showGridView else listViewTemp">
+        <div class="col-md-3 mt-4" *ngFor="let product of products">
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-img-actions">
+                        <img src={{product.image_url}} class="card-img img-fluid" width="96" height="350" alt=""> 
+                    </div>
+                </div>
+                <div class="card-body card-body-content bg-light text-center">
+                    <h6 class="font-weight-semibold mb-2 text-primary">{{product.title}}</h6>
+                    <p class="text-default mb-2 product-breadcrumbs">{{product.breadcrumbs}}</p>
+                    <h4 class="mb-0 font-weight-semibold">{{product.price}}</h4>
+                    <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #listViewTemp>
+        <ul class="list-group row products-list mt-3" *ngIf="!showGridView">
+            <li class="list-group-item col-12 col-sm-6 mt-3" *ngFor="let product of products">
+                <div class="list-group-item-block">
+                    <div class="list-img col-2 col-sm-2">
+                        <img src={{product.image_url}} class="img-fluid" alt={{product.title}}/>
+                    </div>
+                    <div class="list-img-content col-10 col-sm-10 px-2">
+                        <!-- <div class="col-12">{{product.title}}</div>
+                        <div class="col-12">{{product.price}}</div> -->
+                        <h6 class="font-weight-semibold mb-2 text-primary">{{product.title}}</h6>
+                        <p class="text-default mb-2 product-breadcrumbs">{{product.breadcrumbs}}</p>
+                        <h4 class="font-weight-semibold product-price">{{product.price}}</h4>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </ng-template>
+    
+</div>

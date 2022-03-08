@@ -1,0 +1,28 @@
+<!-- <virtual-scroll [items]="items" (update)="update($event)" (vsEnd)="fetchMore($event)">
+	<div class="list-item" *ngFor="let item of viewPortItems"><button (click)=showAlert(item)>{{item}}</button></div>
+</virtual-scroll> -->
+<!-- <div class="search-results" 
+    infinite-scroll 
+    (scrolled)="onScrollDown($event)" >
+    
+      <div class="list-group">
+        <div class="list-group-item list-group-item-action" *ngFor="let i of items">
+          <div class="btn-wrapper">
+            <button type="button" class="btn btn-outline-primary" (click)="showAlert(i)">{{i}}</button>
+          </div>
+        </div>
+      </div>
+</div> -->
+<div class="search-results" 
+    infinite-scroll 
+    (scrolled)="onScrollDown($event)"> <!--(scrolledUp)="onScrollUp($event)"-->
+      <div class="grid-block">
+        <ngb-alert #staticAlert *ngIf="!staticAlertClosed" (closed)="staticAlertClosed = true">Button {{selectedIndex}} is clicked</ngb-alert>
+        <div class="grid-tile" *ngFor="let i of items">
+          <div class="btn-wrapper border border-success" (click)="showAlert(i)">
+            <button type="button" class="btn text-primary">Button {{i}}</button>
+          </div>
+        </div>
+      </div>
+</div>
+

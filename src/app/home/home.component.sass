@@ -1,0 +1,31 @@
+.banner-block
+    position: relative
+    .banner-image
+        position: relative
+        img
+            width: 100%
+    .wrapper
+        max-width: 100%
+        overflow: hidden
+        position: absolute
+        width: 100%
+        left: 0
+        color: #fff
+        font-size: 18px
+        height: 40px
+        background: #333754
+        // top: 0
+        bottom: 0
+    .marquee
+        white-space: nowrap
+        overflow: hidden
+        display: inline-block
+        animation: marquee 10s linear infinite
+    .marquee p
+        display: inline-block
+    @keyframes marquee
+        0%
+            transform: translate3d(0, 0, 0)
+        100%
+            transform: translate3d(-50%, 0, 0)
+        
