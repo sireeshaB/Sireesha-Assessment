@@ -4,7 +4,7 @@
         <label class="form-label">Enter Timer Limit</label>
     </div>
     <div class="col-6">
-        <input type="text" class="form-control" name="timer" [(ngModel)]="timer" (keyup)="sendTimerValue(timer, 'send');" />
+        <input type="text" class="form-control" name="timer" [(ngModel)]="timer" (keyup)="sendTimerValue(timer, 'send');" [disabled]="disableInput ? true:false" />
     </div>
 </div>
 <div class="row">

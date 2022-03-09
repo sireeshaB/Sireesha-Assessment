@@ -7,8 +7,6 @@ import { CountDownTimerService } from '../count-down-timer-with-services.service
   styleUrls: ['./count-down-input-timer.component.sass']
 })
 export class CountDownInputTimerComponent{
-  // @Output() timerValue = new EventEmitter<Object>();
-  // @Output() pauseTimer = new EventEmitter<any>();
   timer:any;
   btnText = 'Start';
   startClickCount = 0;
@@ -16,13 +14,17 @@ export class CountDownInputTimerComponent{
   dateList:any = [];
   date:any;
   displayTime:any;
+  disableInput: boolean = false;
   constructor(private datepipe: DatePipe, private countDownTimerService: CountDownTimerService) { }
 
   ngOnInit() {
     this.countDownTimerService.getButtonText().subscribe((txt) => {
       this.btnText = txt;
+      this.disableInput = false;
       if(this.btnText === 'Start') {
-        this.resetTimer();
+        setTimeout(()=> {
+          this.resetTimer();
+        }, 1000);
       }
     });
   }
@@ -47,6 +49,7 @@ export class CountDownInputTimerComponent{
     return obj;
   }
   resetTimer(){
+    this.disableInput = false;
     // making timer value 0
     this.timer = '';
     this.startClickCount = 0;
@@ -58,6 +61,7 @@ export class CountDownInputTimerComponent{
     this.countDownTimerService.setTimerObj(obj);
   }
   startTimer() {
+    this.disableInput = true;
     // check whether it is number or not
     if (this.btnText === 'Start') {
       console.log('start clicked');
