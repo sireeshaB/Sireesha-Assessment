@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-// import { p } from 'ngx-virtual-scroller';
 @Component({
   selector: 'app-create-dynamic-divs',
   templateUrl: './create-dynamic-divs.component.html',
@@ -53,82 +52,4 @@ export class CreateDynamicDivsComponent{
     this.staticAlertClosed = false;
     this.selectedIndex = index;
   }
-
-  // onScrollUp(ev: any) {
-  //   console.log("scrolled up!", ev);
-  //   // this.sum += 20;
-  //   this.prependItems();
-
-  //   // this.direction = "scroll up";
-  // }
-
-  // appendItems() {
-  //   this.addItems("push");
-  // }
-
-  // prependItems() {
-  //   this.addItems("unshift");
-  // }
-
-  // addItems(_method: string) {
-  //   for (let i = 0; i < this.sum; ++i) {
-  //     if( _method === 'push'){
-  //       this.listArray.push([i].join(""));
-  //     }else if( _method === 'unshift'){
-  //       this.listArray.unshift([i].join(""));
-  //     }
-  //   }
-  // }
-  // items:number[] = [];
-  // viewPortItems:any;
-  // loading: any;
-
-  // constructor() {
-
-  // }
-
-  // ngOnInit() {
-  //   for (let i = 0; i < 100; i++) {
-  //     this.addItem(i);
-  //     // this.items.push(i);
-  //   }
-
-  //   console.log(this.items);
-  // }
-  // showAlert(item:number) {
-  //   alert(item)
-  // }
-  // addItem(item:number) {
-  //   this.items = [
-  //     ...this.items,
-  //     item
-  //   ];
-  // }
-
-  // update($event:any) {
-  //   this.viewPortItems = $event;
-  //   console.log(this.viewPortItems);
-  // }
-
-  // fetchMore(event: ChangeEvent) {
-  //   if (event.end !== this.items.length) return;
-  //   this.loading = true;
-  //   this.fetchNextChunk(this.items.length, 10).then(chunk => {
-  //     this.items = this.items.concat(chunk);
-  //     this.loading = false;
-  //   }, () => this.loading = false);
-  // }
-
-  // fetchNextChunk(skip: number, limit: number): Promise<number[]> {
-  //       return new Promise((resolve, reject) => {
-  //           let chunk = [];
-
-  //           for(let i = skip; i < (skip + limit); i++) {
-  //             chunk.push(i);
-  //           }
-
-  //           resolve(chunk);
-  //       });
-  // }
-
 }

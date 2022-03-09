@@ -9,9 +9,6 @@ import { CountDownTimerService } from '../count-down-timer-with-services.service
 export class CountDownDisplayButtonsClickCountComponent{
   constructor(private countDownTimerService: CountDownTimerService) {}
   clickCount: any;
-  // ngOnChanges() {
-  //   // this.clickCount = this.btnClickCountObj;
-  // }
   ngOnInit() {
     this.countDownTimerService.getTimerObj().subscribe((res) => {
       console.log(res);

@@ -19,10 +19,17 @@ export class CountDownInputTimerComponent{
   constructor(private datepipe: DatePipe, private countDownTimerService: CountDownTimerService) { }
 
   ngOnInit() {
-    this.countDownTimerService.getButtonText().subscribe(txt => this.btnText = txt);
+    this.countDownTimerService.getButtonText().subscribe((txt) => {
+      this.btnText = txt;
+      if(this.btnText === 'Start') {
+        this.resetTimer();
+      }
+    });
   }
   sendTimerValue(value:any, text:any) {
-    let obj= {"text": text, "value": value};
+    this.btnText === 'Start';
+    console.log('sendtimervalue changes btntext to start');
+    let obj= {"text": text, "value": value, "btnClickCount": { "startCount": 0, "pauseCount": 0, "value": value }, "timestamps": []};
     this.countDownTimerService.setTimerObj(obj);
   }
   formatTimeObj(value:any, text:any) {

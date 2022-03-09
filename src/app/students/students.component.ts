@@ -1,5 +1,4 @@
 import { Component} from '@angular/core';
-import { Student } from './student';
 import { StudentsService } from './students.service';
   @Component({
     selector: 'app-students',
@@ -7,7 +6,6 @@ import { StudentsService } from './students.service';
     styleUrls: ['./students.component.sass']
   })
   export class StudentsComponent {
-  // students:Student[] = [];
   students:any;
   keys:any;
   constructor(private studentsService: StudentsService) {}

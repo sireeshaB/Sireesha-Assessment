@@ -10,7 +10,6 @@ import { Component, ViewChild } from '@angular/core';
 export class CountDownTimerWithDecoratorsComponent{
 
   constructor() { }
-  // @ViewChild('displayTimer') displayTimer:any;
   timerObj: any;
   timestamps:any;
   btnClickCount: any;

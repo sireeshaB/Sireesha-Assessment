@@ -18,7 +18,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="card-img-actions">
-                        <img src={{product.image_url}} class="card-img img-fluid" width="96" height="350" alt=""> 
+                        <img src={{product.image_url}} class="card-img img-fluid" alt={{product.title}}> 
                     </div>
                 </div>
                 <div class="card-body card-body-content bg-light text-center">
@@ -38,8 +38,6 @@
                         <img src={{product.image_url}} class="img-fluid" alt={{product.title}}/>
                     </div>
                     <div class="list-img-content col-10 col-sm-10 px-2">
-                        <!-- <div class="col-12">{{product.title}}</div>
-                        <div class="col-12">{{product.price}}</div> -->
                         <h6 class="font-weight-semibold mb-2 text-primary">{{product.title}}</h6>
                         <p class="text-default mb-2 product-breadcrumbs">{{product.breadcrumbs}}</p>
                         <h4 class="font-weight-semibold product-price">{{product.price}}</h4>
